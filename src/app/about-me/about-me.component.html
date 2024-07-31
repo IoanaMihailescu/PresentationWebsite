@@ -1,0 +1,27 @@
+<div class="aboutme-container">
+  <div class="about-me-main">
+    <div class="content-grid">
+      <!-- First Row -->
+      <div class="main-section {{selectedSection.class}}">
+        <div class="text-column">
+          <div class="title">{{ selectedSection.title }}</div>
+          <p class="section-description" [innerHTML]="selectedSection.description"></p>
+        </div>
+        <div class="image-column">
+          <img [src]="selectedSection.image" alt="{{ selectedSection.title }}">
+        </div>
+      </div>
+      <!-- Second Row -->
+      <div class="thumbnail-section">
+        <div
+          *ngFor="let section of sections"
+          class="thumbnail-item test"
+          (click)="selectSection(section)"
+        >
+          <img [src]="section.image" alt="{{ section.title }}"  class="test">
+          <p>{{ section.title }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

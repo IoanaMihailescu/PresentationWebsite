@@ -1,0 +1,44 @@
+.background {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+
+    .about-me {
+        background-image: url(../../assets/images/white.jpg);
+        background-size: cover;
+    }
+
+    .recommendations {
+        background-image: url(../../assets/images/lavender.jpg);
+        background-size: cover;
+        justify-content: center;
+    }
+
+    .snapon {
+        background-image: url(../../assets/images/fields.jpg);
+        background-size: cover;
+        justify-content: center;
+    }
+
+    .cognizant {
+        background-image: url(../../assets/images/cute.jpg);
+        background-size: cover;
+        justify-content: center;
+    }
+
+    .american-greetings {
+        background-image: url(../../assets/images/roses.jpg);
+        background-size: cover;
+        justify-content: center;
+    }
+
+    .oneandone-internet {
+        background-image: url(../../assets/images/fragile.jpg);
+        background-size: cover;
+        justify-content: center;
+    }
+}
+
+.home-main-content {
+    background-color: black;
+}

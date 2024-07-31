@@ -1,0 +1,143 @@
+.about-me-main {
+    display: flex;
+    justify-content: center;
+
+    .content-grid {
+      display: grid;
+      grid-template-rows: minmax(auto, 60vh) 1fr; 
+      width: 90%;
+  
+      .main-section {
+        display: flex;
+        padding: 20px;
+        /* height: 60%; */
+        margin: 0 5%;
+        
+        &.myCareer, &.myHobbies {
+          .text-column {
+            width: fit-content;
+        }
+    
+        }
+        
+        .text-column {
+          width: 50%;
+          padding-right: 20px;
+          align-self: center;
+          
+  
+          h2 {
+            margin-top: 0;
+          }
+  
+          p {
+            margin-top: 10px;
+          }
+
+          .title {
+            font-size: 3.3rem;
+            text-align: left;
+          }
+        }
+  
+        .image-column {
+          width: 50%;
+          display: flex;
+          justify-content: end;
+          align-items: center;
+  
+          img {
+            max-width: 80%;
+            max-height: 80%;
+            object-fit: contain; /* Ensure image fits within the container */
+          }
+        }
+      }
+  
+      .thumbnail-section {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        padding:20px;
+        padding-bottom: 40px;
+        /* height: 100%;  */
+  
+        .thumbnail-item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          gap:15px;
+  
+          img {
+            max-width: 70%;
+            border-radius: 100px;
+            object-fit: contain; /* Ensure thumbnails fit within the container */
+            border-radius: 8px;
+            cursor: url('../../assets/images/aim.svg') 16 16, auto;
+            transition: transform 0.3s;
+  
+            &:hover {
+              transform: scale(1.05);
+            }
+          }
+  
+          p {
+            margin-top: 5px;
+            margin-top: 5px;
+            font-family: "NotoSansKR-VariableFont_wght", sans-serif;
+            font-weight: 400;
+            font-size: 1.2rem;
+            color: #F1F1F1;
+        }
+          }
+        }
+      }
+    }
+
+    @media screen and (max-height: 600px) {
+    .content-grid {
+      font-size: 1rem;
+      width: 100%;
+    }
+    .title {
+      font-size: 1.5rem;
+    }
+
+    .about-me-main{
+      .content-grid {
+        .main-section {
+          width: unset;
+
+          .image-column {
+            width: 70%;
+          }
+
+          &.myCareer, &.myHobbies {
+
+          .text-column {
+            width:unset;
+          }
+        }
+        .text-column {
+          width:unset;
+        }
+        }
+
+        .thumbnail-section {
+          grid-template-columns: repeat(3, auto);
+          padding: 0 0 40px 0;
+          margin: -2px -2%;
+
+          .thumbnail-item {
+            img {
+              width: 50%;
+            }
+          }
+        }
+
+      }
+
+    }   
+
+  }

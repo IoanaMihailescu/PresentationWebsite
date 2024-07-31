@@ -1,0 +1,147 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    margin:0;
+    font-family: "NotoSansKR-VariableFont_wght", sans-serif;
+}
+
+.resume-section {
+    display: flex;
+    text-align: center;
+    &.recommendation {
+      justify-content: center;
+    }
+  }
+  
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #111;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    z-index: 1000;
+
+    a:link {
+      color: white;
+      text-decoration: none;
+    }
+    
+    a:visited {
+      color: lightgray;
+    }
+
+    a:hover {
+      color:#757575;
+    }
+    
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+
+  .transition-header {
+    color:#F1F1F1;
+    img {
+        width:100%;
+    }
+}
+ 
+.section-description {
+  font-size: 1.3rem;
+  font-family: "NotoSansKR-VariableFont_wght", sans-serif;
+  font-weight: 200;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.title, .title a {
+  font-size: 3.3rem;
+  text-align: left;
+  text-decoration: none;
+  color: black;
+}
+
+.snapon .title,
+.cognizant .title,
+.american-greetings .title,
+.oneandone-internet .title {
+  color:#f1f1f1;
+}
+
+.experience-description {
+  margin: 20px 0
+}
+
+.technologies {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+
+  img, svg {
+      width:100px;
+  }
+}
+
+.main-container {
+  display:flex;
+  flex-direction: column;
+  position: relative;
+  height: 700px;
+  overflow: hidden;
+  background-color: rgba(241 241 241 / 90%);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 50px auto;
+  min-height: 500px;
+  max-width: 55%;
+  min-width: 55vw;
+}
+
+.snapon .main-container, 
+.cognizant .main-container,
+.americanGreetings-container,
+.oneandone-internet .main-container {
+  color:#f1f1f1;
+  text-align: left;
+}
+
+.snapon .main-container {
+  background-color: rgb(57 72 111 / 93%);
+}
+
+.cognizant .main-container {
+  background-color: rgb(69 82 50 / 90%);
+}
+
+.american-greetings .main-container {
+  background-color: rgba(125 38 63 / 90%);
+}
+
+.oneandone-internet .main-container {
+  background-color: rgb(27 40 36 / 89%);
+}
+
+.experience-list {
+  ul {
+    line-height: 1.8;
+    margin-left: -20px;
+  }
+
+  ul li:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  .main-container {
+    max-width: 80%;
+    min-height: 400px;
+     height: fit-content;
+      }
+}

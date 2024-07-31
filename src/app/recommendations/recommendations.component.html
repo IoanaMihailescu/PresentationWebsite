@@ -1,0 +1,26 @@
+<div class="carousel-container">
+    <button class="prev" (click)="prevSlide()">
+      <img class="buttons_image" src="../../assets/images/button_nav.png">
+    </button>
+    <div class="carousel">
+      <div class="carousel-item" *ngFor="let recommendation of recommendations; let i = index" [class.active]="i === currentIndex">      
+        <div class="title">
+         <a title="Check their Linkedin profile" href="{{recommendation.profile}}"> {{ recommendation.title }} </a>
+        </div>
+      <div class="subTitle">
+          {{ recommendation.subtitle }}
+        </div>
+        <div class="section-description"  [innerHTML]="recommendation.text">
+        </div>
+      </div>
+    </div>
+    <div class="navigationButtons">
+      <button class="next" (click)="nextSlide()">
+        <img class="buttons_image" src="../../assets/images/button_nav.png">
+      </button>
+    </div>
+    <div class="carousel-bullets">
+      <span *ngFor="let recommendation of recommendations; let i = index" [class.active]="i === currentIndex" (click)="goToSlide(i)"></span>
+    </div>
+</div>
+  
